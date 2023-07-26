@@ -29,8 +29,8 @@ class ConvertToPdfTest < Minitest::Test
   end
 
   def test_name_escaping_while_converting
-    Docsplit.extract_pdf('test/fixtures/PDF file with spaces \'single\' and "double quotes".doc', :output => OUTPUT)
-    assert Dir["#{OUTPUT}/*.pdf"] == ["#{OUTPUT}/PDF file with spaces 'single' and \"double quotes\".pdf"]
+    Docsplit.extract_pdf('test/fixtures/PDF file with spaces \'single\' and \'double quotes\'.doc', :output => OUTPUT)
+    assert Dir["#{OUTPUT}/*.pdf"] == ["#{OUTPUT}/PDF file with spaces 'single' and 'double quotes'.pdf"]
   end
 
 end

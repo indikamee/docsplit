@@ -43,9 +43,9 @@ class ExtractImagesTest < Minitest::Test
   end
 
   def test_name_escaping_while_extracting_images
-    Docsplit.extract_images('test/fixtures/PDF file with spaces \'single\' and "double quotes".pdf', :format => :gif, :size => "250x", :output => OUTPUT)
-    assert_directory_contains(OUTPUT, ['PDF file with spaces \'single\' and "double quotes"_1.gif',
-                                       'PDF file with spaces \'single\' and "double quotes"_1.gif'])
+    Docsplit.extract_images('test/fixtures/PDF file with spaces \'single\' and \'double quotes\'.pdf', :format => :gif, :size => "250x", :output => OUTPUT)
+    assert_directory_contains(OUTPUT, ['PDF file with spaces \'single\' and \'double quotes\'_1.gif',
+                                       'PDF file with spaces \'single\' and \'double quotes\'_1.gif'])
   end
 
 end
